@@ -12,7 +12,7 @@ function CartSummary({ openCart, cartItems, setCartItems }) {
     return null;
   }
   return (
-    <div className="absolute flex flex-col left-0 -translate-x-1/2 top-full border border-gray-200 shadow-2xl bg-white rounded-md z-10 w-80">
+    <div className="absolute flex flex-col left-0 -translate-x-3/4 lg:-translate-x-1/2 top-full border border-gray-200 shadow-2xl bg-white rounded-md z-10 w-80">
       <div className="p-4 font-bold border-b-2 border-gray-200">Cart</div>
       <div className="p-4 text-center flex flex-col gap-2 text-gray-400 font-bold">
         {cartItems &&

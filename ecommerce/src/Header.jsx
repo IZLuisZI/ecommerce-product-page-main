@@ -49,7 +49,16 @@ function Header({ cartItems, addToCart, setCartItems }) {
       </div>
       <div className="flex gap-6 items-center">
         <div className="relative">
-          <article onClick={() => handleCartState()} className="cursor-pointer">
+          <article
+            onClick={() => handleCartState()}
+            className="cursor-pointer relative"
+          >
+            {cartItems.length > 0 && (
+              <div className="absolute -top-1 -right-2 rounded-full px-1 text-xs bg-orange-600 font-bold text-white">
+                {cartItems.length}
+              </div>
+            )}
+
             <img src={Cart} alt="Cart" />
           </article>
           {open && (

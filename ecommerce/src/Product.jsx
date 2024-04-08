@@ -9,7 +9,7 @@ import { useState } from "react";
 function Product({ addToCart }) {
   const [productCount, setProductCount] = useState(1);
   return (
-    <section className="mt-16 mx-96 px-24 grid grid-cols-2 gap-12">
+    <section className="md:mt-16 mb-12 xl:mx-24 xl:px-8 2xl:mx-64 2xl:px-24 grid sm:grid-cols-1 lg:grid-cols-2 gap-0 md:gap-12">
       <ProductGallery
         images={MainPhoto}
         imagesArray={[MainPhoto, Image2, Image3, Image4]}

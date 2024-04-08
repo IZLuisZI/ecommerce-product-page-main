@@ -15,12 +15,12 @@ function ProductGallery({ images, imagesArray }) {
   };
 
   return (
-    <div className="flex flex-col gap-2">
-      <div className="pt-12 px-12 pb-6">
+    <div className="flex flex-col gap-2 items-center justify-center">
+      <div className="pt-12 px-0 md:px-12 pb-6">
         <img
           src={images}
           alt={`Main image`}
-          className="rounded-2xl aspect-square"
+          className="md:rounded-2xl aspect-square"
         />
       </div>
       <ProductImageGallery
@@ -29,7 +29,7 @@ function ProductGallery({ images, imagesArray }) {
         closed={() => setOpen(false)}
         imageIndex={selectedImageIndex}
       />
-      <div className="grid grid-cols-4 px-12  gap-12">
+      <div className="sm:grid grid-cols-4 px-12 hidden  gap-12">
         {imagesArray.slice(0, 3).map((image, index) => (
           <img
             onClick={() => handleImageClick(index)}

@@ -29,7 +29,7 @@ function ProductGallery({ images, imagesArray }) {
         closed={() => setOpen(false)}
         imageIndex={selectedImageIndex}
       />
-      <div className="sm:grid grid-cols-4 px-12 hidden  gap-12">
+      <div className="sm:grid grid-cols-4 px-12 hidden gap-4 xl:gap-12">
         {imagesArray.slice(0, 3).map((image, index) => (
           <img
             onClick={() => handleImageClick(index)}

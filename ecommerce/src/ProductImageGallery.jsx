@@ -25,7 +25,7 @@ function ProductImageGallery({ images, open, closed, imageIndex }) {
         onClick={closed}
         className="fixed top-0 left-0 w-screen h-screen bg-gray-900 opacity-50 z-20"
       ></div>
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-4  w-1/4 flex flex-col gap-4 z-30">
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  p-4 w-3/4  lg:w-1/2 flex flex-col gap-4 z-30">
         <div className="flex justify-between">
           <span></span>{" "}
           <button>

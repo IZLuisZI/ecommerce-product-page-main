@@ -17,10 +17,10 @@ function CartSummary({ openCart, cartItems, setCartItems }) {
       <div className="p-4 text-center flex flex-col gap-2 text-gray-400 font-bold">
         {cartItems &&
           cartItems.map((item, index) => (
-            <div key={index} className="font-normal flex justify-between h-12">
+            <div key={index} className="font-normal flex justify-between ">
               <div>
                 <img
-                  className="rounded-md h-full"
+                  className="rounded-md h-12 object-contain"
                   src={item.MainPhoto}
                   alt="Product"
                 />

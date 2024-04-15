@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import Header from "./Header.jsx";
 import Product from "./Product.jsx";
+
+export const CartContext = createContext();
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -25,12 +27,9 @@ function App() {
   };
   return (
     <>
-      <Header
-        cartItems={cartItems}
-        addToCart={addToCart}
-        setCartItems={setCartItems}
-      />{" "}
-      <Product addToCart={addToCart} />
+      <CartContext.Provider value={{ cartItems, addToCart, setCartItems }}>
+        <Header /> <Product />
+      </CartContext.Provider>
     </>
   );
 }

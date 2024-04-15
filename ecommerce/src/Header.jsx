@@ -5,9 +5,13 @@ import SideMenu from "./SideMenu.jsx";
 import HeaderNav from "./Headernav.jsx";
 import { useState } from "react";
 import CartSummary from "./CartSummary.jsx";
-function Header({ cartItems, addToCart, setCartItems }) {
+import { useContext } from "react";
+import { CartContext } from "./App.jsx";
+function Header() {
   const [open, setOpen] = useState(false);
   const [openStatus, setOpenStatus] = useState(false);
+
+  const { cartItems, addToCart, setCartItems } = useContext(CartContext);
   function handleCartState() {
     setOpen(!open);
   }

@@ -1,5 +1,5 @@
 import HeaderNav from "./Headernav.jsx";
-import Close from "../../images/icon-close.svg";
+import Close from "../assests/images//icon-close.svg";
 import { useState } from "react";
 
 function SideMenu({ openStatus, setStatus }) {

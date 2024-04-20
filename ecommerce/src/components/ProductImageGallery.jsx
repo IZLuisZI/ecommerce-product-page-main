@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
 import { useState, useEffect } from "react";
-import Close from "../../images/icon-close.svg";
-import Right from "../../images/icon-next.svg";
-import Left from "../../images/icon-previous.svg";
+import Close from "../assests/images/icon-close.svg";
+import Right from "../assests/images/icon-next.svg";
+import Left from "../assests/images/icon-previous.svg";
 function ProductImageGallery({ images, open, closed, imageIndex }) {
   const [display, setDisplay] = useState(imageIndex);
 

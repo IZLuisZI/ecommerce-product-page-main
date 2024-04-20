@@ -1,4 +1,4 @@
-import Delete from "../../images/icon-delete.svg";
+import Delete from "../assests/images/icon-delete.svg";
 
 function CartSummary({ openCart, cartItems, setCartItems }) {
   function handleRemove(itemToRemove) {

@@ -1,15 +1,15 @@
-import Logo from "../../images/logo.svg";
-import Cart from "../../images/icon-cart.svg";
-import Avatar from "../../images/image-avatar.png";
-import SideMenu from "./SideMenu.jsx";
-import HeaderNav from "./Headernav.jsx";
-import { useState } from "react";
-import CartSummary from "./CartSummary.jsx";
-import { useContext } from "react";
-import { CartContext } from "./App.jsx";
+import Logo from "../assests/images/logo.svg";
+import Cart from "../assests/images/icon-cart.svg";
+import Avatar from "../assests/images/image-avatar.png";
+import SideMenu from "./SideMenu";
+import HeaderNav from "./Headernav";
+import { useState, useContext } from "react";
+import CartSummary from "./CartSummary";
+import { CartContext } from "../hooks/State";
+import useCart from "../hooks/State.js";
 function Header() {
-  const [open, setOpen] = useState(false);
   const [openStatus, setOpenStatus] = useState(false);
+  const { open, setOpen } = useCart();
 
   const { cartItems, addToCart, setCartItems } = useContext(CartContext);
   function handleCartState() {

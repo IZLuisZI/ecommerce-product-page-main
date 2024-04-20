@@ -1,8 +1,9 @@
 import ProductImageGallery from "./ProductImageGallery.jsx";
 import { useState } from "react";
+import useCart from "../hooks/State.js";
 function ProductGallery({ images, imagesArray }) {
-  const [open, setOpen] = useState(false);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const { open, setOpen } = useCart();
 
   const handleImageClick = (index) => {
     setOpen(true);

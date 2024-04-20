@@ -1,4 +1,6 @@
-import Cart from "../../images/icon-cart.svg";
+import Cart from "../assests/images/icon-cart.svg";
+import { useContext } from "react";
+import { CartContext } from "../hooks/State.js";
 function ProductDescription({
   productName,
   productPrice,
@@ -6,9 +8,10 @@ function ProductDescription({
   setProductCount,
   productOriginalPrice,
   productDiscount,
-  addToCart,
   MainPhoto,
 }) {
+  const { cartItems, setCartItems, addToCart } = useContext(CartContext);
+
   return (
     <div className="flex justify-center md:pt-12 sm:pt-0 sm:px-6 px-6 ">
       <div className="flex md:items-center">
@@ -56,12 +59,16 @@ function ProductDescription({
             <section className="w-full flex justify-center items-center">
               <button
                 onClick={() =>
-                  addToCart({
-                    productName,
-                    productPrice,
-                    productCount,
-                    MainPhoto,
-                  })
+                  addToCart(
+                    {
+                      productName,
+                      productPrice,
+                      productCount,
+                      MainPhoto,
+                    },
+                    cartItems,
+                    setCartItems
+                  )
                 }
                 className="bg-orange-600 hover:bg-orange-500 rounded-md flex flex-1 justify-center py-3  px-12 gap-2 font-semibold text-white"
               >
